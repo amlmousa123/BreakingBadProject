@@ -19,7 +19,7 @@ class _CharactersScreenState extends State<CharactersScreen> {
   late List<Character> searchedCharacters;
   bool _isSearching = false;
   final _searchedTextController = TextEditingController();
-  //gfuiuig
+
   @override
   void initState() {
     super.initState();
@@ -161,16 +161,3 @@ class _CharactersScreenState extends State<CharactersScreen> {
     });
   }}
 
- /* _startSearch() {
-    ModalRoute.of(context)!
-        .addLocalHistoryEntry(LocalHistoryEntry(onRemove: () {
-          _clearSearch();
-      setState(() {
-        _isSearching = false;
-      });
-    }));
-    setState(() {
-      _isSearching = true;
-    });
-  }
-}*/
