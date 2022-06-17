@@ -4,6 +4,7 @@ class CharacterDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //ftdrd
     return Container();
   }
 }

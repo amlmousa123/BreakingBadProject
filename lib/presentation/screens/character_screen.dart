@@ -6,7 +6,6 @@ import 'package:breaking_bad_project/presentation/widgets/character_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class CharactersScreen extends StatefulWidget {
   const CharactersScreen({Key? key}) : super(key: key);
 
@@ -35,8 +34,8 @@ class _CharactersScreenState extends State<CharactersScreen> {
             ? buildSearchField()
             : Text(
                 "Characters",
-                style: TextStyle(color: MyColors.myGery,
-                fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: MyColors.myGery, fontWeight: FontWeight.bold),
               ),
         actions: _isSearching
             ? [
@@ -131,7 +130,8 @@ class _CharactersScreenState extends State<CharactersScreen> {
       controller: _searchedTextController,
       onChanged: (searchedCharacter) {
         searchedCharacters = allCharacters
-            .where((character) => character.name.toLowerCase().startsWith(searchedCharacter))
+            .where((character) =>
+                character.name.toLowerCase().startsWith(searchedCharacter))
             .toList();
         setState(() {});
       },
@@ -144,6 +144,7 @@ class _CharactersScreenState extends State<CharactersScreen> {
     });
     Navigator.of(context).pop;
   }
+
   void _startSearch() {
     ModalRoute.of(context)!
         .addLocalHistoryEntry(LocalHistoryEntry(onRemove: _stopSearching));
@@ -159,5 +160,5 @@ class _CharactersScreenState extends State<CharactersScreen> {
     setState(() {
       _isSearching = false;
     });
-  }}
-
+  }
+}
